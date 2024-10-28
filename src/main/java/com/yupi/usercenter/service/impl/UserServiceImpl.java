@@ -167,6 +167,8 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
         if (originUser == null) {
             return null;
         }
+        // 把密码password 省去
+
         User safetyUser = new User();
         safetyUser.setId(originUser.getId());
         safetyUser.setUsername(originUser.getUsername());
