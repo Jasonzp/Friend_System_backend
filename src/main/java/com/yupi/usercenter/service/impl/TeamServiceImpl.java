@@ -2,6 +2,7 @@ package com.yupi.usercenter.service.impl;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import com.sun.xml.internal.bind.v2.TODO;
 import com.yupi.usercenter.common.ErrorCode;
 import com.yupi.usercenter.exception.BusinessException;
 import com.yupi.usercenter.mapper.TeamMapper;
@@ -374,7 +375,7 @@ public class TeamServiceImpl extends ServiceImpl<TeamMapper, Team>
 
         Team team = new Team();
         BeanUtils.copyProperties(oldTeam, team);
-// TODO 按理说，MyBatis Plus 底层应该会自动更新 UpdateTime 这个字段，但是这里没有
+//  按理说，MyBatis Plus 底层应该会自动更新 UpdateTime 这个字段，但是这里没有
         team.setUpdateTime(new Date());
 
         boolean result = this.updateById(team);

@@ -19,6 +19,8 @@ import com.yupi.usercenter.model.vo.TeamUserVO;
 import com.yupi.usercenter.service.TeamService;
 import com.yupi.usercenter.service.UserService;
 import com.yupi.usercenter.service.UserTeamService;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.BeanUtils;
 import org.springframework.data.redis.core.RedisTemplate;
@@ -39,6 +41,7 @@ import java.util.stream.Collectors;
  * https://github.com/Jasonzp
  */
 @Slf4j
+@Api(tags = "队伍相关接口")
 @RestController
 @RequestMapping("/team")
 @CrossOrigin(origins = "http://localhost:3000")
